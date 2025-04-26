@@ -11,3 +11,26 @@ function mysteryOperation ()
 		throw new Error("The operation is failed mysteriously!");
 	}
 }
+
+const missionNum = 20;
+
+const daysIfSuccess = 13;
+const daysIfNotSuccess = 1;
+const daysForAttendance = 3;
+
+let daysEarned =0;
+
+for (let i = 0; i < missionNum; i++){
+	try{
+		mysteryOperation();
+		daysEarned += daysIfSuccess
+	}
+	catch (Error){
+		daysEarned += daysIfNotSuccess;
+	}
+	finally{
+		daysEarned += daysFor Attendance;
+	}
+}
+
+console.log('Vacation Days Earned:', daysEarned);
